@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <div id="top-container">
+        <div id="project-title">
+            <span id="title">BIG DATA 박세준과 아이들</span>
+        </div>
+        <div id="yearDropDown" class="dropdown">
+            <button class="dropbtn" onclick="showToggleYear()">
+                <span id="year_title" class="dropbtn_content">해당년도</span>
+                <span class="dropbtn_click" style="font-family: Material Icons; font-size : 16px; color : #3b3b3b; float:right;"
+                  >arrow_drop_down</span>
+              </button>
+              <div id="dropdown-year" class="dropdown-content">
+                <div class="drop_value" onclick="showMenu(this.innerText)">2016</div>
+                <div class="drop_value" onclick="showMenu(this.innerText)">2017</div>
+                <div class="drop_value" onclick="showMenu(this.innerText)">2018</div>
+                <div class="drop_value" onclick="showMenu(this.innerText)">2019</div>
+                <div class="drop_value" onclick="showMenu(this.innerText)">2020</div>
+              </div>
+        </div>
+        
+        <div id="filterDropDown" class="dropdown">
+            <button class="dropbtn" onclick="showToggleFilter()">
+                <span id="filter_title" class="dropbtn_content">데이터필터</span>
+                <span class="dropbtn_click2" style="font-family: Material Icons; font-size : 16px; color : #3b3b3b; float:right;"
+                  >arrow_drop_down</span>
+              </button>
+              <div id="dropdown-filter" class="dropdown-content">
+                <div class="drop_value" value="prop_tot" onclick="showMenu2(this.innerText)">재산피해</div>
+                <div class="drop_value" value="life_tot" onclick="showMenu2(this.innerText)">인명피해</div>
+              </div>
+        </div> 
+        <div id="submitBtn">
+            <button onclick="valueSubmit()">확인</button>
+        </div>
+
+    </div>
+    
+    <section id="content_container">
+        <div id="map-container">
+            <iframe id="mapViewer" src="2016재산피해.html" width="110%" height="110%" frameborder="0"></iframe>
+
+        </div>
+
+
+    </section>
+    
+</body>
+</html>
